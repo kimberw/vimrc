@@ -158,9 +158,13 @@ let g:go_fmt_command = "goimports"
 " => Syntastic (syntax checker)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
+\   'make': ['make', 'checkmake'],
+\   'cmake': ['cmake', 'cmakelint'],
+\   'c': ['c', "cppcheck", "clang"],
+\   'cpp': ['cpp', "cppcheck", "cpplint", "clang"],
 \   'javascript': ['jshint'],
 \   'python': ['flake8'],
-\   'go': ['go', 'golint', 'errcheck']
+\   'go': ['go', 'go vet', 'golint', 'errcheck']
 \}
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
