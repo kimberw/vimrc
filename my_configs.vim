@@ -19,9 +19,9 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 noremap <Leader>n <c-]>
 noremap <Leader>b <c-t>
-let g:tagbar_ctags_bin='/usr/local/bin/ctags'  " Proper Ctags locations
-let g:tagbar_width=26                          " Default is 40, seems too wide
-" noremap <silent> <Leader>y :TagbarToggle       " Display panel with y (or ,y)
+let g:tagbar_ctags_bin='/usr/bin/ctags'         " Proper Ctags locations
+let g:tagbar_width=26                           " Default is 40, seems too wide
+" noremap <silent> <Leader>y :TagbarToggle      " Display panel with y (or ,y)
 
 noremap <Up> <Nop>
 noremap <Down> <Nop>
@@ -33,15 +33,15 @@ nnoremap <f5> :!ctags -R *<CR>
 
 set spell
 set cinoptions=g0,:0,(0,W4,N-s
-let g:ycm_global_ycm_extra_conf = '~/.vim_runtime/my_plugins/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-" youcomoleteme
-nnoremap <leader>jd :YcmCompleter GoTo<CR>
-" completeparameter
-inoremap <silent><expr> ( complete_parameter#pre_complete("()")
-smap <c-j> <Plug>(complete_parameter#goto_next_parameter)
-imap <c-j> <Plug>(complete_parameter#goto_next_parameter)
-smap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
-imap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
+" let g:ycm_global_ycm_extra_conf = '~/.vim_runtime/my_plugins/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+" " youcomoleteme
+" nnoremap <leader>jd :YcmCompleter GoTo<CR>
+" " completeparameter
+" inoremap <silent><expr> ( complete_parameter#pre_complete("()")
+" smap <c-j> <Plug>(complete_parameter#goto_next_parameter)
+" imap <c-j> <Plug>(complete_parameter#goto_next_parameter)
+" smap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
+" imap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
 
 
 " Specify a directory for plugins
