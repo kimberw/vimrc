@@ -57,7 +57,7 @@ call plug#begin('~/.vim_runtime/my_plugins')
 "Plug 'tenfyzhong/CompleteParameter.vim'
 
 Plug 'elzr/vim-json'
-Plug 'vim-scripts/vim-svngutter'
+Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/vim-easy-align'
 Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-surround'
