@@ -62,6 +62,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
+Plug 'majutsushi/tagbar'
 
 " Initialize plugin system
 call plug#end()
