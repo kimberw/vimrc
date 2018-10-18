@@ -8,6 +8,8 @@ set enc=utf8
 set fencs=utf8,gbk,gb2312,gb18030
 set cursorline
 
+" for complete
+set completeopt=menu,menuone,preview,noselect,noinsert
 " autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
