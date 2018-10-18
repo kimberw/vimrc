@@ -159,11 +159,11 @@ let g:go_fmt_command = "goimports"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "ale
 ""始终开启标志列
-let g:ale_set_highlights = 1
+" let g:ale_set_highlights = 1
 let g:ale_set_signs = 1
 let g:ale_sign_column_always = 1
 " let g:ale_sign_column_always = 1
-" let g:ale_set_highlights = 0
+let g:ale_set_highlights = 0
 "自定义error和warning图标
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚡'
@@ -191,7 +191,7 @@ let g:ale_linters = {
 \   'cpp': ['cpp', "gcc", "clang", "cppcheck", "cpplint"],
 \   'javascript': ['jshint'],
 \   'python': ['flake8'],
-\   'go': ['go', 'go vet', 'golint', 'errcheck']
+\   'go': ['go', 'golangserver', 'go vet', 'golint', 'errcheck']
 \}
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
