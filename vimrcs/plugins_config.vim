@@ -182,7 +182,6 @@ nmap sn <Plug>(ale_next_wrap)
 nmap <Leader>d :ALEDetail<CR>
 " Enable completion where available.
 let g:ale_completion_enabled = 1
-" set ofu=syntaxcomplete#Complete
 
 let g:ale_linters = {
 \   'make': ['make', 'checkmake'],
