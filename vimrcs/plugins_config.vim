@@ -180,14 +180,18 @@ nmap sn <Plug>(ale_next_wrap)
 "nmap <Leader>s :ALEToggle<CR>
 ""<Leader>d查看错误或警告的详细信息
 nmap <Leader>d :ALEDetail<CR>
+" Set this. Airline will handle the rest.
+let g:airline#extensions#ale#enabled = 1
 " Enable completion where available.
 let g:ale_completion_enabled = 1
+let g:ale_c_parse_compile_commands=1
+
 
 let g:ale_linters = {
 \   'make': ['make', 'checkmake'],
 \   'cmake': ['cmake', 'cmakelint'],
-\   'c': ['c', "gcc", "cppcheck", "clang"],
-\   'cpp': ['cpp', "gcc", "clang", "cppcheck", "cpplint"],
+\   'c': ['c', "gcc", "clangd", "cppcheck", "clang"],
+\   'cpp': ['cpp', "gcc", "clangd", "clang", "cppcheck", "cpplint"],
 \   'javascript': ['jshint'],
 \   'python': ['flake8'],
 \   'go': ['go', 'golangserver', 'go vet', 'golint', 'errcheck']
