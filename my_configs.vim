@@ -15,6 +15,9 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" autocmd TextChangedI * call ale#completion#Queue()
+" autocmd TextChangedI * call feedkeys("\<c-x>\<c-o>", 'i')
+
 vnoremap <Leader>y "+y
 noremap <Leader>p "+p
 autocmd BufWritePost $MYVIMRC source $MYVIMRC

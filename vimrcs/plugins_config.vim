@@ -105,7 +105,7 @@ let g:multi_cursor_quit_key            = '<Esc>'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => surround.vim config
-" Annotate strings with gettext 
+" Annotate strings with gettext
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vmap Si S(i_<esc>f)
 au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
@@ -115,29 +115,29 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
+            \ 'colorscheme': 'wombat',
+            \ }
 
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ ['mode', 'paste'],
-      \             ['fugitive', 'readonly', 'filename', 'modified'] ],
-      \   'right': [ [ 'lineinfo' ], ['percent'] ]
-      \ },
-      \ 'component': {
-      \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
-      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
-      \ },
-      \ 'component_visible_condition': {
-      \   'readonly': '(&filetype!="help"&& &readonly)',
-      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-      \ },
-      \ 'separator': { 'left': ' ', 'right': ' ' },
-      \ 'subseparator': { 'left': ' ', 'right': ' ' }
-      \ }
+            \ 'colorscheme': 'wombat',
+            \ 'active': {
+            \   'left': [ ['mode', 'paste'],
+            \             ['fugitive', 'readonly', 'filename', 'modified'] ],
+            \   'right': [ [ 'lineinfo' ], ['percent'] ]
+            \ },
+            \ 'component': {
+            \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
+            \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+            \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+            \ },
+            \ 'component_visible_condition': {
+            \   'readonly': '(&filetype!="help"&& &readonly)',
+            \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+            \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+            \ },
+            \ 'separator': { 'left': ' ', 'right': ' ' },
+            \ 'subseparator': { 'left': ' ', 'right': ' ' }
+            \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vimroom
@@ -218,4 +218,3 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <F8> :TagbarToggle<CR>
 nnoremap <silent> <leader>tt :TagbarToggle<cr>
-
