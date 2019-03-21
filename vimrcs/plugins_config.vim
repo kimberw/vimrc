@@ -218,3 +218,9 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <F8> :TagbarToggle<CR>
 nnoremap <silent> <leader>tt :TagbarToggle<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => gotests-vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:gotests_bin = s:vim_runtime.'/bin/gotests'

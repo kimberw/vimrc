@@ -87,6 +87,3 @@ nmap ga <Plug>(EasyAlign)
 
 " for vim-autoformat
 noremap <F3> :Autoformat<CR>
-
-" for gotests-vim
-let g:gotests_bin = '~/.vim_runtime/bin/gotests'
