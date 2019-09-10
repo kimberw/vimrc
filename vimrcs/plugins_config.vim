@@ -186,6 +186,10 @@ let g:airline#extensions#ale#enabled = 1
 " let g:ale_completion_enabled = 1
 " let g:ale_completion_delay = 1000
 let g:ale_c_parse_compile_commands=1
+" 离开 insert 模式的时候运行 linter
+let g:ale_lint_on_insert_leave = 1
+let g:ale_c_cppcheck_options = '--enable=all'
+let g:ale_cpp_cppcheck_options = '--enable=all'
 
 let g:ale_linters = {
 \   'make': ['make', 'checkmake'],
