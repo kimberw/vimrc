@@ -33,6 +33,9 @@
 " Sets how many lines of history VIM has to remember
 set history=500
 
+" set term screen
+set term=screen-256color
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
