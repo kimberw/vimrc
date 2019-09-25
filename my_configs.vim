@@ -85,6 +85,11 @@ Plug 'majutsushi/tagbar'
 Plug 'buoto/gotests-vim'
 Plug 'ycm-core/YouCompleteMe' ", { 'do': './install.py --clang-completer' }
 
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+" Plug 'altercation/vim-colors-solarized'
+" Plug 'itchyny/lightline.vim'
+
 " Initialize plugin system
 call plug#end()
 

@@ -115,29 +115,29 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
-            \ 'colorscheme': 'wombat',
-            \ }
+      \ 'colorscheme': 'wombat',
+      \ }
 
 let g:lightline = {
-            \ 'colorscheme': 'wombat',
-            \ 'active': {
-            \   'left': [ ['mode', 'paste'],
-            \             ['fugitive', 'readonly', 'filename', 'modified'] ],
-            \   'right': [ [ 'lineinfo' ], ['percent'] ]
-            \ },
-            \ 'component': {
-            \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
-            \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-            \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
-            \ },
-            \ 'component_visible_condition': {
-            \   'readonly': '(&filetype!="help"&& &readonly)',
-            \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-            \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-            \ },
-            \ 'separator': { 'left': ' ', 'right': ' ' },
-            \ 'subseparator': { 'left': ' ', 'right': ' ' }
-            \ }
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ ['mode', 'paste'],
+      \             ['fugitive', 'readonly', 'filename', 'modified'] ],
+      \   'right': [ [ 'lineinfo' ], ['percent'] ]
+      \ },
+      \ 'component': {
+      \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
+      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \ },
+      \ 'component_visible_condition': {
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+      \ },
+      \ 'separator': { 'left': ' ', 'right': ' ' },
+      \ 'subseparator': { 'left': ' ', 'right': ' ' }
+      \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vimroom
@@ -180,8 +180,14 @@ nmap sn <Plug>(ale_next_wrap)
 "nmap <Leader>s :ALEToggle<CR>
 ""<Leader>d查看错误或警告的详细信息
 nmap <Leader>d :ALEDetail<CR>
+
 " Set this. Airline will handle the rest.
 let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_theme='dark'
+
 " Enable completion where available.
 " let g:ale_completion_enabled = 1
 " let g:ale_completion_delay = 1000
