@@ -56,6 +56,7 @@ call plug#begin('~/.vim_runtime/my_plugins')
 " Make sure you use single quotes
 
 " YouCompleteMe
+let g:ycm_confirm_extra_conf = 0
 " let g:ycm_add_preview_to_completeopt = 0
 " let g:ycm_show_diagnostics_ui = 0
 " let g:ycm_server_log_level = 'info'
@@ -84,6 +85,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'majutsushi/tagbar'
 Plug 'buoto/gotests-vim'
 Plug 'ycm-core/YouCompleteMe' ", { 'do': './install.py --clang-completer' }
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' } 
 
 " Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
