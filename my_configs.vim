@@ -28,10 +28,10 @@ let g:tagbar_ctags_bin='/usr/bin/ctags'         " Proper Ctags locations
 let g:tagbar_width=26                           " Default is 40, seems too wide
 " noremap <silent> <Leader>y :TagbarToggle      " Display panel with y (or ,y)
 
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+" noremap <Up> <Nop>
+" noremap <Down> <Nop>
+" noremap <Left> <Nop>
+" noremap <Right> <Nop>
 
 nnoremap <f5> :!ctags -R *<CR>
 " autocmd BufWritePost * call system("ctags -R *")
@@ -67,11 +67,13 @@ let g:ycm_confirm_extra_conf = 0
 " set completeopt=menu,menuone
 " let g:ycm_key_invoke_completion = '<c-z>'
 " noremap <c-z> <NOP>
+" Apply YCM FixIt
+map <F9> :YcmCompleter FixIt<CR>
 
-let g:ycm_semantic_triggers =  {
-            \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
-            \ 'cs,lua,javascript': ['re!\w{2}'],
-            \ }
+" let g:ycm_semantic_triggers =  {
+"             \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
+"             \ 'cs,lua,javascript': ['re!\w{2}'],
+"             \ }
 
 " tenfyzhong/CompleteParameter.vim
 "Plug 'tenfyzhong/CompleteParameter.vim'
