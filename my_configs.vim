@@ -20,12 +20,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 vnoremap <Leader>y "+y
 noremap <Leader>p "+p
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
+" autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 noremap <Leader>n <c-]>
 noremap <Leader>b <c-t>
 let g:tagbar_ctags_bin='/usr/bin/ctags'         " Proper Ctags locations
-let g:tagbar_width=26                           " Default is 40, seems too wide
+" let g:tagbar_width=26                           " Default is 40, seems too wide
 " noremap <silent> <Leader>y :TagbarToggle      " Display panel with y (or ,y)
 
 " noremap <Up> <Nop>
@@ -33,8 +33,8 @@ let g:tagbar_width=26                           " Default is 40, seems too wide
 " noremap <Left> <Nop>
 " noremap <Right> <Nop>
 
-nnoremap <f5> :!ctags -R *<CR>
-autocmd BufWritePost * call system("ctags -R *")
+" nnoremap <f5> :!ctags -R *<CR>
+" autocmd BufWritePost * call system("ctags -R *")
 
 set spell
 set cinoptions=g0,:0,(0,W4,N-s
@@ -93,8 +93,11 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'majutsushi/tagbar'
 Plug 'buoto/gotests-vim'
-Plug 'ycm-core/YouCompleteMe' ", { 'do': './install.py --clang-completer' }
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' } 
+" Plug 'ycm-core/YouCompleteMe' ", { 'do': './install.py --clang-completer' }
+" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' } 
+
+Plug 'universal-ctags/ctags'
+Plug 'ludovicchabant/vim-gutentags'
 
 " Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
@@ -103,6 +106,25 @@ Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
 " Initialize plugin system
 call plug#end()
+
+" gutentags 搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归
+let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project', '.tags_root']
+" 所生成的数据文件的名称
+let g:gutentags_ctags_tagfile = '.tags'
+" 将自动生成的 tags 文件全部放入 ~/.cache/tags 目录中，避免污染工程目录
+let s:vim_tags = expand('~/.cache/tags')
+let g:gutentags_cache_dir = s:vim_tags
+" 配置 ctags 的参数
+let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
+let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
+" 检测 ~/.cache/tags 不存在就新建
+if !isdirectory(s:vim_tags)
+   silent! call mkdir(s:vim_tags, 'p')
+endif
+
+" echodoc 
+set noshowmode
 
 " for vim-gitgutter
 GitGutterEnable
