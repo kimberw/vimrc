@@ -10,7 +10,8 @@ set cursorline
 
 " for complete
 set completeopt=menu,menuone,preview,noselect,noinsert
-" autocmd vimenter * NERDTree
+autocmd vimenter * NERDTree
+" autocmd vimenter * call system("touch .tags_root")
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -24,7 +25,11 @@ noremap <Leader>p "+p
 
 noremap <Leader>n <c-]>
 noremap <Leader>b <c-t>
-let g:tagbar_ctags_bin='/usr/bin/ctags'         " Proper Ctags locations
+
+" Exuberant Ctags
+" let g:tagbar_ctags_bin='/usr/bin/ctags'         " Proper Ctags locations
+" Universal Ctags
+let g:tagbar_ctags_bin='/usr/local/bin/ctags'         " Proper Ctags locations
 " let g:tagbar_width=26                           " Default is 40, seems too wide
 " noremap <silent> <Leader>y :TagbarToggle      " Display panel with y (or ,y)
 
