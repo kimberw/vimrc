@@ -109,6 +109,7 @@ Plug 'ludovicchabant/vim-gutentags'
 " Plug 'altercation/vim-colors-solarized'
 " Plug 'itchyny/lightline.vim'
 
+Plug 'voldikss/vim-translator'
 " Initialize plugin system
 call plug#end()
 
