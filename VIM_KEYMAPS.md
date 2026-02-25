@@ -20,15 +20,15 @@
 
 | 快捷键 | 命令 | 说明 |
 |--------|------|------|
-| `<Leader>nf` | `:NERDTreeToggle<CR>` | 切换文件树面板 |
+| `<Leader>nf` | `:NERDTreeToggle<CR>` | 切换文件树面板 (需要 NERDTree 插件) |
 | `<Leader>n` | `<c-]>` | 跳转到标签定义 |
 | `<Leader>b` | `<c-t>` | 跳回上一个标签 |
-| `<Leader>z` | `:Goyo<cr>` | 切换专注模式 (Goyo 插件) |
-| `<Leader>d` | `:GitGutterToggle<cr>` | 切换 Git 状态显示 |
-| `<Leader>tt` | `:TagbarToggle<cr>` | 切换代码结构面板 |
+| `<Leader>z` | `:Goyo<cr>` | 切换专注模式 (Goyo 插件) ⚠️ |
+| `<Leader>d` | `:GitGutterToggle<cr>` | 切换 Git 状态显示 (需要 vim-gitgutter 插件) ⚠️ |
+| `<Leader>tt` | `:TagbarToggle<cr>` | 切换代码结构面板 (需要 tagbar 插件) ⚠️ |
 | `<Leader>m` | `mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm` | 删除所有空行 |
-| `<Leader>v` | `:.GBrowse!<CR>` | 在 GitHub 上查看���前行 |
-| `<F3>` | `:Autoformat<CR>` | 自动格式化代码 |
+| `<Leader>v` | `:.GBrowse!<CR>` | 在 GitHub 上查看当前行 (需要 vim-fugitive 插件) ⚠️ |
+| `<F3>` | `:Autoformat<CR>` | 自动格式化代码 (需要 vim-autoformat 插件) ⚠️ |
 | `<F5>` | `:!ctags -R *<CR>` | 重新生成 tags 文件 |
 
 ---
@@ -126,21 +126,23 @@
 
 ## 常用快捷键速查
 
-| 模式 | 操作 | 快捷键 |
-|------|------|--------|
-| Normal | 复制到剪贴板 | `<Leader>y` |
-| Normal | 从剪贴板粘贴 | `<Leader>p` |
-| Normal | 跳转到定义 | `<Leader>n` |
-| Normal | 跳转回 | `<Leader>b` |
-| Normal | 打开文件树 | `<Leader>nf` |
-| Normal | 打开代码结构 | `<Leader>tt` |
-| Normal | 切换 Git 显示 | `<Leader>d` |
-| Normal | 专注模式 | `<Leader>z` |
-| Visual | 复制选区 | `<Leader>y` |
-| Visual | 搜索选区 | `*` 或 `#` |
-| Insert | 快速括号 | `$1` `$2` `$3` `$4` |
-| Insert | 快速引号 | `$q` `$e` |
-| Cmd | 命令行快捷 | `<C-A>` `<C-E>` `<C-P>` `<C-N>` |
+| 模式 | 操作 | 快捷键 | 备注 |
+|------|------|--------|------|
+| Normal | 复制到剪贴板 | `<Leader>y` | |
+| Normal | 从剪贴板粘贴 | `<Leader>p` | |
+| Normal | 跳转到定义 | `<Leader>n` | |
+| Normal | 跳转回 | `<Leader>b` | |
+| Normal | 打开文件树 | `<Leader>nf` | ⚠️ 需要 NERDTree |
+| Normal | 打开代码结构 | `<Leader>tt` | ⚠️ 需要 tagbar |
+| Normal | 切换 Git 显示 | `<Leader>d` | ⚠️ 需要 vim-gitgutter |
+| Normal | 专注模式 | `<Leader>z` | ⚠️ 需要 Goyo |
+| Visual | 复制选区 | `<Leader>y` | |
+| Visual | 搜索选区 | `*` 或 `#` | |
+| Insert | 快速括号 | `$1` `$2` `$3` `$4` | |
+| Insert | 快速引号 | `$q` `$e` | |
+| Cmd | 命令行快捷 | `<C-A>` `<C-E>` `<C-P>` `<C-N>` | |
+
+> ⚠️ 标记的快捷键需要安装对应插件才能使用
 
 ---
 
