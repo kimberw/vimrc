@@ -26,7 +26,7 @@ noremap <Leader>b <c-t>
 " noremap <silent> <Leader>y :TagbarToggle      " Display panel with y (or ,y)
 
 " NERDTree toggle with ;nf
-" nnoremap <Leader>nf :NERDTreeToggle<CR>
+nnoremap <Leader>nf :NERDTreeToggle<CR>
 
 " noremap <Up> <Nop>
 " noremap <Down> <Nop>
